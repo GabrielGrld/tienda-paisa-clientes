@@ -1,0 +1,64 @@
+.card {
+    position: relative;
+    border-color: #F0BB62;
+    border-width: 20px;
+    /* background-color: rgb(152, 201, 247); */
+    color: #064635;
+}
+
+.card .comprar {
+    background-color: #1E212D; /* Dark */
+    border: none;
+    color: #FAF3E0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5% 5% 7% 5%;
+    border-radius: 15%;
+    width: 100px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
+.button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+  
+  .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+  .buttons{
+    align-items: center;
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    left: 20%;
+  }
+  .specs{
+    display: flex;
+    justify-content: center;    
+  }
+  .specs p {
+    margin-right: 5px;
+    font-size: 15px;
+  }
+

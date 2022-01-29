@@ -1,0 +1,35 @@
+.single-product {
+    background-color: '';
+    
+    
+}
+
+.product {
+ display: flex;
+ justify-content: space-around;
+ margin: 2% 10%;
+ background-color: '';
+ display:flex;
+  flex-wrap:wrap; /* this */
+  gap:10px;
+ 
+}
+
+.description{
+    align-items: center;
+    background-color: '';
+    color:#1E212D;
+    margin-left:0%;
+    max-width: 600px;
+}
+.image {
+    border: 3px solid #1E212D;
+    max-width:100%;
+    max-height:auto;
+    border-radius: 5%;
+}
+.image-container {
+    max-width: 650px;
+    max-height: auto;
+}
+

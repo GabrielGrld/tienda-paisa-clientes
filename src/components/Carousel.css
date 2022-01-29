@@ -1,0 +1,101 @@
+/* margin-right: auto;  */
+  /* Need a specific value to work */
+
+.carousel-content{
+  position: absolute; 
+  left: 0; 
+  right: 0;
+  top:0;
+  bottom: 0; 
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;  
+  width: 350px; 
+  margin-right: 3%;
+  margin-top:5%;
+  font-size: 1.5rem;
+}
+.carousel-image{
+    background-color: #cccccc;
+    max-width:100%;
+    max-height:100%;
+    border-radius: 2%;
+}
+
+.carousel-content h2, .carousel-content p{
+    color: white;
+}
+
+/*Create zones to swip´on left and right side*/
+
+/*Create zones to swip´on left and right side*/
+.right-arrow {
+    display:flex;
+    justify-content:center;
+    align-items:center;    
+    position:absolute;
+    background-color: '';
+    align-items: center;
+    width: 3%;
+    height:100%;
+    top: -0.05px;
+    right: -0.05px;
+    cursor: pointer;
+    background-color: transparent;
+    color: grey;
+}
+.left-arrow{
+    display:flex;
+    justify-content:center;
+    align-items:center;    
+    position:absolute;
+    background-color: '';
+    align-items: center;
+    width: 3%;
+    height:100%;
+    top: -0.05px;
+    left: -0.05px;
+    cursor: pointer;
+    background-color: transparent;
+    color: transparent;  
+}
+.hide{
+    color: transparent;
+}
+.right-arrow:hover  .hide {
+    display: block;
+    color: white;
+  }
+
+.left-arrow:hover .hide {
+    display: block;
+    color: white;
+  }
+
+.carousel-space{
+ position: relative;
+ background-color: transparent;
+}
+
+
+/* PRUEBA */
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .carousel-content{
+        position: absolute; 
+        left: 0; 
+        right: 0;
+        top:0;
+        bottom: 0; 
+        margin-left: auto;
+        margin-top: auto;
+        margin-bottom: auto; 
+        /* margin-right: auto;  */
+        width: 200px; /* Need a specific value to work */
+        margin-right: 1%;
+        margin-top:2%;
+        font-size: 0.7rem;
+      }
+  }
+
+  /* PRUEBA */
