@@ -17,24 +17,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'Calzado de cuero',
     imgPath:
-    "https://www.esmeraldascolombia.com/wp-content/uploads/2021/06/Banner-Cadenas-Negro-1536x432-1.jpg",
+    "https://i.imgur.com/dTCMqxQ.jpg",
+  },  
+  {
+    label: 'Calzado',
+    imgPath:
+    "https://i.imgur.com/3R6wAkn.jpg",
   },
   {
-    label: 'Bird',
+    label: 'Calzado',
     imgPath:
-    "https://www.esmeraldascolombia.com/wp-content/uploads/2021/06/Banner-Dijes-Mujer-OP.jpg",
-  },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-    "https://www.esmeraldascolombia.com/wp-content/uploads/2021/06/Banner-Aretes-2048x576-1.jpg",
-  },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-    "https://www.esmeraldascolombia.com/wp-content/uploads/2021/06/Banner-Reykon2-2048x576-1.jpg",
+    "https://i.imgur.com/zvMnvks.jpg",
   },
 ];
 
@@ -78,10 +73,7 @@ function SwipeableTextMobileStepper() {
                 src={step.imgPath}
                 alt={step.label}
               />              
-            <div className={true?"carousel-content":""} >        
-            <h2 >Titulo a mostrar</h2>
-            <p >Contenido a mostrar</p>
-            </div>
+            
 
               </>
             ) : null}
