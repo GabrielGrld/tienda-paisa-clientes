@@ -12,10 +12,10 @@ export default function ProductsGrid({products}){
    return(<Box sx={{ flexGrow: 1 }} >
       <Grid container spacing={2} justify = "center"   >
         {products && products.map((document) => (   
-        (<Grid  item xs={12} sm={6} md={4} lg ={3}>    
-            <div key={document.id} align="center">
+        (<Grid key={document.id+'productsgrid'} item xs={12} sm={6} md={4} lg ={3}>    
+            <div  align="center">
             <Card  
-          key = {document.imgUrl}
+          key = {document.imgUrl+'cardgrid'}
           title={document.name}
           description ={document.details.substring(0,100)}          
           imgLink ={document.imgUrl}
