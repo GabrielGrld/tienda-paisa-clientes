@@ -6,10 +6,14 @@ import ProductsGrid from '../../components/ProductsGrid'
 export default function ProductCategory() {
     const {category} = useParams()
     const {documents, error} = useCollection('productos')
-    const currentFilter = category
-    console.log(category)
+    const currentFilter = category    
 
-    const products = documents ? documents.filter((document)=>{
+    // filter out the sold items
+    if(documents){      
+      var unsoldItems = documents.filter(product => product.sold===false)      
+    }
+
+    const products = unsoldItems ? unsoldItems.filter((document)=>{
         switch(currentFilter){
           case 'all':
             return true
@@ -31,11 +35,11 @@ export default function ProductCategory() {
             return true
         }
       }) : null
-      console.log(products)
+      
     return (
         <div className="container" style={{"margin":"1em", "alignItems": "center"}}>
             <h1>Categoría: {category}</h1>
-            {error&&<p>{error}</p>}    
+           {error&&<p>{error}</p>}    
            {products&&<ProductsGrid products={products} />}
            {products&&products.length<1&&<p>Proximamente mas productos en esta categoria</p>}
         </div>
