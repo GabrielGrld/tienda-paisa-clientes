@@ -1,7 +1,6 @@
 .single-product {
     background-color: '';
-    
-    
+    margin-top: 4%;    
 }
 
 .product {
@@ -20,7 +19,7 @@
     background-color: '';
     color:#1E212D;
     margin-left:0%;
-    max-width: 600px;
+    max-width: 400px;
 }
 .image {
     border: 3px solid #1E212D;
@@ -30,6 +29,6 @@
 }
 .image-container {
     max-width: 650px;
-    max-height: auto;
+    max-height: 600px;
 }
 

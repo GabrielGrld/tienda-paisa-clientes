@@ -1,6 +1,7 @@
-import { useLocation, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import { useDocument } from "../../hooks/useDocument";
 
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 //styles
 import './Product.css'
@@ -8,7 +9,8 @@ import './Product.css'
 export default function Product() {
     const { id } = useParams();    
     const {error, document} = useDocument('productos', id)
-    
+    const WAurl = `https://wa.me/573106426734?text=Hola%21%2c%20Estoy%20interesado%20en%20este%20producto%20https://paisa-store-ctg.web.app/producto/${id}`
+
 
 
       // Create our number formatter.
@@ -22,10 +24,9 @@ export default function Product() {
     });
     if(document){
     const price = parseInt(document.price)
-    var priceFormat = formatter.format(price);
-    console.log(priceFormat)
-    
+    var priceFormat = formatter.format(price);    
     }  
+
     
     return (
         <div className='single-product'>
@@ -35,13 +36,18 @@ export default function Product() {
                 <>
                 <div className='product'>
                 <div className="image-container">
-                <img src={document.imgUrl} alt="Imagen de Producto" className="image" />
+                <img src={document.imgUrl} alt={document.name} className="image" />
                 </div>
                 <div className="description">
                 <h3>{document.name}</h3>
                 <p>{document.details}</p>
                 {priceFormat&&<p>Precio: {priceFormat}</p>}
+                <div className="card">
+                <p>Lo quiero!</p>
+                <button className="comprar" > <a target="_blank" href={WAurl}><ShoppingCartIcon /></a> </button>
                 </div>
+                </div>
+                
                 </div>
                 
                 </>
